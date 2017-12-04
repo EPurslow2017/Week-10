@@ -47,6 +47,7 @@ function dialogDismissed(buttonIndex) {
 	
 	if(buttonIndex==1) new Toast({content: "Good, keep at it!", duration: 3000});
    	else if(buttonIndex==2) new Toast({content: 'Get to the cafe!', duration: 3000});
+         createNotification();
     else if(buttonIndex==3) new Toast({content: 'Take a rest then...', duration: 3000});
 
 }
@@ -59,7 +60,7 @@ function createNotification() {
     //generate a time to post notification
     //
     var currentTime = new Date().getTime(); //current time
-    var notificationTime = new Date(currentTime + 1000); //delayed time  - add 1 second
+    var notificationTime = new Date(currentTime + 30000); //delayed time  - add 1 second
     			
     //
     //setup notification
@@ -67,8 +68,8 @@ function createNotification() {
     
     cordova.plugins.notification.local.schedule({ 
     	id: 		1,
-        title: 		"Hey you",
-        message: 	"This is an example notification",
+        title: 		"Done eating?",
+        message: 	"Best get back to work!",
         date: 		notificationTime, 
         badge: 		notification_count++
    	});
