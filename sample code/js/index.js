@@ -47,7 +47,6 @@ function dialogDismissed(buttonIndex) {
 	
 	if(buttonIndex==1) new Toast({content: "Good, keep at it!", duration: 3000});
    	else if(buttonIndex==2) new Toast({content: 'Get to the cafe!', duration: 3000});
-         createNotification();
     else if(buttonIndex==3) new Toast({content: 'Take a rest then...', duration: 3000});
 
 }
